@@ -16,6 +16,9 @@ import re
 from pathlib import Path
 from typing import Dict, List, Any, Optional
 
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+from whatsapp_parser import parse_whatsapp_file, parse_whatsapp_text
+
 HOME = Path.home()
 PARANCO_ROUTES = HOME / "Library/Application Support/paranco/routes.json"
 SCRIBA_JOBS = HOME / ".scriba/jobs"
@@ -185,13 +188,16 @@ def main():
     paranco_info = load_paranco_info()
     conversations = extract_scriba_jobs()
 
-    # Controlla eventuali chat esterne caricate in data/imports
+    # Controlla eventuali chat esterne caricate in data/imports (.txt e .zip)
     import_dir = OUTPUT_DIR / "imports"
     if import_dir.exists():
-        for f in import_dir.glob("*.txt"):
-            ext_turns = import_whatsapp_chat(f)
-            if ext_turns:
-                conversations.append({"job_id": f"whatsapp_{f.stem}", "turns": ext_turns})
+        for f in list(import_dir.glob("*.txt")) + list(import_dir.glob("*.zip")):
+            try:
+                ext_turns, _ = parse_whatsapp_file(f)
+                if ext_turns:
+                    conversations.append({"job_id": f"whatsapp_{f.stem}", "turns": ext_turns})
+            except Exception as e:
+                print(f"Avviso parsing {f.name}: {e}", file=sys.stderr)
 
     # Calcola statistiche complessive
     stats: Dict[str, Any] = {

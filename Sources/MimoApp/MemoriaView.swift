@@ -1,4 +1,5 @@
 import SwiftUI
+import UniformTypeIdentifiers
 import MimoCore
 
 struct MemoriaView: View {
@@ -103,12 +104,32 @@ struct MemoriaView: View {
                                 .font(.caption).foregroundStyle(.secondary)
                         }
                         Spacer()
+
+                        Button {
+                            let panel = NSOpenPanel()
+                            panel.allowsMultipleSelection = false
+                            panel.canChooseDirectories = false
+                            panel.canChooseFiles = true
+                            panel.allowedContentTypes = [.plainText, .zip]
+                            panel.message = "Seleziona un'esportazione chat di WhatsApp (.txt o .zip)"
+                            if panel.runModal() == .OK, let selectedUrl = panel.url {
+                                Task {
+                                    await memoryStore.importWhatsAppChat(url: selectedUrl)
+                                }
+                            }
+                        } label: {
+                            Label("Importa Chat WhatsApp", systemImage: "square.and.arrow.down")
+                        }
+                        .disabled(memoryStore.isExtracting)
+                        .buttonStyle(.borderedProminent)
+                        .controlSize(.small)
+
                         Button {
                             Task {
                                 await memoryStore.runExtraction()
                             }
                         } label: {
-                            Label(memoryStore.isExtracting ? "Scansione..." : "Riscansiona Memoria", systemImage: "arrow.clockwise")
+                            Label(memoryStore.isExtracting ? "Scansione..." : "Riscansiona", systemImage: "arrow.clockwise")
                         }
                         .disabled(memoryStore.isExtracting)
                         .buttonStyle(.bordered)

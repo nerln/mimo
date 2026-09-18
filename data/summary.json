@@ -14,7 +14,7 @@
         }
       ]
     },
-    "total_conversations": 16,
+    "total_conversations": 17,
     "speakers": {
       "Alvaro": {
         "turns": 83,
@@ -22,9 +22,9 @@
         "jobs": 5
       },
       "Mario": {
-        "turns": 187,
-        "words": 6834,
-        "jobs": 6
+        "turns": 188,
+        "words": 6847,
+        "jobs": 7
       },
       "UNKNOWN": {
         "turns": 26,
@@ -42,9 +42,9 @@
         "jobs": 5
       },
       "Eugenio": {
-        "turns": 348,
-        "words": 16888,
-        "jobs": 15
+        "turns": 351,
+        "words": 16959,
+        "jobs": 16
       },
       "Alberto": {
         "turns": 14,
@@ -80,6 +80,11 @@
         "turns": 27,
         "words": 575,
         "jobs": 1
+      },
+      "Alberto Robazza": {
+        "turns": 3,
+        "words": 53,
+        "jobs": 1
       }
     }
   },
@@ -103,7 +108,7 @@
       "file": "/Users/eugenionerelli/dev/mimo/data/dataset_Alvaro.jsonl"
     },
     "Mario": {
-      "samples": 187,
+      "samples": 188,
       "file": "/Users/eugenionerelli/dev/mimo/data/dataset_Mario.jsonl"
     },
     "SPEAKER_02": {
@@ -115,7 +120,7 @@
       "file": "/Users/eugenionerelli/dev/mimo/data/dataset_Amministrazione__gestione_viaggi_.jsonl"
     },
     "Eugenio": {
-      "samples": 348,
+      "samples": 351,
       "file": "/Users/eugenionerelli/dev/mimo/data/dataset_Eugenio.jsonl"
     },
     "Alberto": {

@@ -77,4 +77,15 @@ public final class MemoryStore: ObservableObject, @unchecked Sendable {
             self.lastExtractedDate = Date()
         }
     }
+
+    public func importWhatsAppChat(url: URL) async {
+        await MainActor.run { isExtracting = true }
+        let importsDir = dataDir.appendingPathComponent("imports")
+        try? FileManager.default.createDirectory(at: importsDir, withIntermediateDirectories: true)
+        let targetFile = importsDir.appendingPathComponent(url.lastPathComponent)
+        try? FileManager.default.removeItem(at: targetFile)
+        try? FileManager.default.copyItem(at: url, to: targetFile)
+
+        await runExtraction()
+    }
 }
