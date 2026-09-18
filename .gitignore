@@ -1,0 +1,13 @@
+.DS_Store
+.build/
+*.xcodeproj
+.swiftpm/
+Mimo.app
+__pycache__/
+*.pyc
+models/adapters/*.pt
+models/Modelfile.*
+data/dataset_*.jsonl
+data/imports/
+.wrangler/
+node_modules/

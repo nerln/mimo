@@ -1,0 +1,16 @@
+{
+	"$schema": "node_modules/wrangler/config-schema.json",
+	"name": "mimo-session",
+	"main": "src/index.js",
+	"compatibility_date": "2025-08-01",
+	"account_id": "07cb0ba12d363b709525c412c502f57a",
+	"observability": {
+		"enabled": true
+	},
+	"kv_namespaces": [
+		{
+			"binding": "MIMO_STORE",
+			"id": "91c5bf12ed2c4bb68c76a0eedb493a7d"
+		}
+	]
+}

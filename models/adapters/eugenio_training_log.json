@@ -1,0 +1,34 @@
+{
+  "speaker": "Eugenio",
+  "device": "mps",
+  "samples": 348,
+  "trainable_parameters": 1563136,
+  "training_time_seconds": 15.95,
+  "history": [
+    {
+      "epoch": 1,
+      "loss": 4.499872668222948,
+      "perplexity": 90.00566998893827
+    },
+    {
+      "epoch": 2,
+      "loss": 3.385881646112962,
+      "perplexity": 29.544028615230268
+    },
+    {
+      "epoch": 3,
+      "loss": 3.049401727589694,
+      "perplexity": 21.10271547269132
+    },
+    {
+      "epoch": 4,
+      "loss": 2.861578497019681,
+      "perplexity": 17.489111670290807
+    },
+    {
+      "epoch": 5,
+      "loss": 2.734595315022902,
+      "perplexity": 15.403508605915977
+    }
+  ]
+}

@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mimo — Sessioni Chat Partecipate</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🎭</text></svg>">
+</head>
+<body>
+  <div class="app-container">
+    <!-- Header -->
+    <header class="chat-header">
+      <div class="header-left">
+        <div class="brand">
+          <span class="logo-icon">🎭</span>
+          <div>
+            <h1>Mimo</h1>
+            <p class="subtitle">Chat partecipata per fine-tuning locale</p>
+          </div>
+        </div>
+      </div>
+      <div class="header-right">
+        <div class="room-badge">
+          <span class="pulse-dot"></span>
+          <span id="room-display">stanza-nerln</span>
+        </div>
+        <button id="btn-export" class="btn-secondary" title="Scarica i turni della chat per il dataset locale">
+          ⬇ Esporta per Training
+        </button>
+      </div>
+    </header>
+
+    <!-- Main Content Area -->
+    <main class="chat-main">
+      <!-- Sidebar / Info Panel -->
+      <aside class="chat-sidebar">
+        <div class="sidebar-section">
+          <h3>La tua Identità</h3>
+          <div class="input-group">
+            <label for="username-input">Nome interlocutore:</label>
+            <input type="text" id="username-input" value="Visitatore" placeholder="Il tuo nome">
+          </div>
+          <div class="input-group">
+            <label for="room-input">Codice stanza:</label>
+            <input type="text" id="room-input" value="stanza-nerln" placeholder="Es. stanza-nerln">
+          </div>
+          <button id="btn-switch-room" class="btn-small">Cambia Stanza</button>
+        </div>
+
+        <div class="sidebar-section">
+          <h3>Come Funziona</h3>
+          <p class="info-text">
+            Ogni messaggio scambiato in questa stanza concorre all'addestramento del clone locale su macOS.
+          </p>
+          <ul class="feature-list">
+            <li>🛡️ <strong>Paranco</strong> protegge l'accesso al disco locale</li>
+            <li>🎙️ <strong>Scriba</strong> diarizza e mappa le identità</li>
+            <li>⚡ <strong>Apple M4</strong> esegue il fine-tuning LoRA in locale</li>
+            <li>🌐 <strong>Cloudflare</strong> sincronizza i partecipanti online</li>
+          </ul>
+        </div>
+
+        <div class="sidebar-section">
+          <h3>Clone AI Locale</h3>
+          <div class="ai-status">
+            <span class="status-indicator online"></span>
+            <span>Eugenio Clone (Ollama)</span>
+          </div>
+          <button id="btn-ask-clone" class="btn-outline">
+            Chiedi un parere al Clone
+          </button>
+        </div>
+      </aside>
+
+      <!-- Chat Feed & Composer -->
+      <section class="chat-feed-container">
+        <div id="chat-messages" class="messages-list">
+          <div class="message system-message">
+            Benvenuto nella sessione online di Mimo. Scrivi un messaggio per partecipare al dataset di addestramento.
+          </div>
+        </div>
+
+        <footer class="chat-composer">
+          <form id="chat-form" class="composer-form">
+            <input 
+              type="text" 
+              id="message-input" 
+              placeholder="Scrivi qui il tuo messaggio per la stanza..." 
+              autocomplete="off"
+              required
+            >
+            <button type="submit" id="btn-send" class="btn-primary">
+              Invia
+            </button>
+          </form>
+        </footer>
+      </section>
+    </main>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>

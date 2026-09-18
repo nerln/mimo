@@ -1,0 +1,150 @@
+{
+  "stats": {
+    "paranco": {
+      "routes_file": "/Users/eugenionerelli/Library/Application Support/paranco/routes.json",
+      "routes_count": 1,
+      "routes": [
+        {
+          "destination": "file:///Users/eugenionerelli/.scriba/inbox/",
+          "enabled": true,
+          "extensions": [],
+          "id": "CD858D08-922E-42DC-BE12-823E74070D1A",
+          "name": "memo-in-scriba",
+          "sourceID": "voice-memos"
+        }
+      ]
+    },
+    "total_conversations": 16,
+    "speakers": {
+      "Alvaro": {
+        "turns": 83,
+        "words": 2548,
+        "jobs": 5
+      },
+      "Mario": {
+        "turns": 187,
+        "words": 6834,
+        "jobs": 6
+      },
+      "UNKNOWN": {
+        "turns": 26,
+        "words": 261,
+        "jobs": 8
+      },
+      "SPEAKER_02": {
+        "turns": 76,
+        "words": 2741,
+        "jobs": 6
+      },
+      "Amministrazione (gestione viaggi)": {
+        "turns": 69,
+        "words": 1298,
+        "jobs": 5
+      },
+      "Eugenio": {
+        "turns": 348,
+        "words": 16888,
+        "jobs": 15
+      },
+      "Alberto": {
+        "turns": 14,
+        "words": 746,
+        "jobs": 1
+      },
+      "Aleksandar": {
+        "turns": 16,
+        "words": 115,
+        "jobs": 1
+      },
+      "SPEAKER_04": {
+        "turns": 26,
+        "words": 440,
+        "jobs": 2
+      },
+      "SPEAKER_00": {
+        "turns": 17,
+        "words": 450,
+        "jobs": 6
+      },
+      "SPEAKER_01": {
+        "turns": 30,
+        "words": 1137,
+        "jobs": 2
+      },
+      "SPEAKER_03": {
+        "turns": 37,
+        "words": 619,
+        "jobs": 1
+      },
+      "Medico": {
+        "turns": 27,
+        "words": 575,
+        "jobs": 1
+      }
+    }
+  },
+  "prominent_speakers": [
+    "Alvaro",
+    "Mario",
+    "SPEAKER_02",
+    "Amministrazione (gestione viaggi)",
+    "Eugenio",
+    "Alberto",
+    "Aleksandar",
+    "SPEAKER_04",
+    "SPEAKER_00",
+    "SPEAKER_01",
+    "SPEAKER_03",
+    "Medico"
+  ],
+  "generated_datasets": {
+    "Alvaro": {
+      "samples": 83,
+      "file": "/Users/eugenionerelli/dev/mimo/data/dataset_Alvaro.jsonl"
+    },
+    "Mario": {
+      "samples": 187,
+      "file": "/Users/eugenionerelli/dev/mimo/data/dataset_Mario.jsonl"
+    },
+    "SPEAKER_02": {
+      "samples": 76,
+      "file": "/Users/eugenionerelli/dev/mimo/data/dataset_SPEAKER_02.jsonl"
+    },
+    "Amministrazione (gestione viaggi)": {
+      "samples": 69,
+      "file": "/Users/eugenionerelli/dev/mimo/data/dataset_Amministrazione__gestione_viaggi_.jsonl"
+    },
+    "Eugenio": {
+      "samples": 348,
+      "file": "/Users/eugenionerelli/dev/mimo/data/dataset_Eugenio.jsonl"
+    },
+    "Alberto": {
+      "samples": 14,
+      "file": "/Users/eugenionerelli/dev/mimo/data/dataset_Alberto.jsonl"
+    },
+    "Aleksandar": {
+      "samples": 16,
+      "file": "/Users/eugenionerelli/dev/mimo/data/dataset_Aleksandar.jsonl"
+    },
+    "SPEAKER_04": {
+      "samples": 26,
+      "file": "/Users/eugenionerelli/dev/mimo/data/dataset_SPEAKER_04.jsonl"
+    },
+    "SPEAKER_00": {
+      "samples": 17,
+      "file": "/Users/eugenionerelli/dev/mimo/data/dataset_SPEAKER_00.jsonl"
+    },
+    "SPEAKER_01": {
+      "samples": 30,
+      "file": "/Users/eugenionerelli/dev/mimo/data/dataset_SPEAKER_01.jsonl"
+    },
+    "SPEAKER_03": {
+      "samples": 37,
+      "file": "/Users/eugenionerelli/dev/mimo/data/dataset_SPEAKER_03.jsonl"
+    },
+    "Medico": {
+      "samples": 27,
+      "file": "/Users/eugenionerelli/dev/mimo/data/dataset_Medico.jsonl"
+    }
+  }
+}
